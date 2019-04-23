@@ -1,0 +1,13 @@
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\bin\Debug\Store Manager.exe.config
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\bin\Debug\Store Manager.exe
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\bin\Debug\Store Manager.pdb
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store_Manager.Form1.resources
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store_Manager.Properties.Resources.resources
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store Manager.csproj.GenerateResource.cache
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store Manager.csproj.CoreCompileInputs.cache
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store Manager.csproj.CopyComplete
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store Manager.exe
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store Manager.pdb
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store_Manager.Stock.resources
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store_Manager.Form.resources
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store Manager.csprojAssemblyReference.cache
