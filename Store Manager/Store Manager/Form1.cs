@@ -22,7 +22,9 @@ namespace Store_Manager
             System.Drawing.Point P = new Point(0 ,bunifuFlatButton1.Location.Y);
             panel3.Location = P;
             panel3.Visible = true;
-            stock1.Hide();
+            stock2.Hide();
+            vendor1.Hide();
+            quart1.Show();
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
@@ -30,7 +32,9 @@ namespace Store_Manager
             System.Drawing.Point P = new Point(0, bunifuFlatButton2.Location.Y);
             panel3.Location = P;
             panel3.Visible = true;
-            stock1.Show();
+            vendor1.Hide();
+            quart1.Hide();
+            stock2.Show();
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
@@ -45,11 +49,17 @@ namespace Store_Manager
             System.Drawing.Point P = new Point(0, bunifuFlatButton4.Location.Y);
             panel3.Location = P;
             panel3.Visible = true;
+            quart1.Hide();
+            vendor1.Show();
+            stock2.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
+            vendor1.Hide();
+            quart1.Hide();
+            stock2.Hide();
 
         }
 
@@ -70,6 +80,26 @@ namespace Store_Manager
         private void bunifuThinButton21_Click_1(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            System.Drawing.Point P = new Point(0, bunifuFlatButton6.Location.Y);
+            panel3.Location = P;
+            panel3.Visible = true;
+            stock2.Hide();
+            vendor1.Hide();
+            quart1.Hide();
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            System.Drawing.Point P = new Point(0, bunifuFlatButton5.Location.Y);
+            panel3.Location = P;
+            panel3.Visible = true;
+            stock2.Hide();
+            vendor1.Hide();
+            quart1.Hide();
         }
     }
 }

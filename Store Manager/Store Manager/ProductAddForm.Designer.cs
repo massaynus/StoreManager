@@ -1,6 +1,6 @@
 ﻿namespace Store_Manager
 {
-    partial class Form
+    partial class ProductAddForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductAddForm));
             this.N = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsDataSet1 = new Store_Manager.ProductsDataSet();

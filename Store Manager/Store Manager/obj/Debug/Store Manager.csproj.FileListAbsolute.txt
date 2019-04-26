@@ -9,5 +9,8 @@ C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manag
 C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store Manager.exe
 C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store Manager.pdb
 C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store_Manager.Stock.resources
-C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store_Manager.Form.resources
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store_Manager.Vendor.resources
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store_Manager.ProductAddForm.resources
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store_Manager.VendorAddForm.resources
+C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store_Manager.Quart.resources
 C:\Users\Yassine\Documents\Mes Projets C#\Fun Projects\Store Manager\Store Manager\obj\Debug\Store Manager.csprojAssemblyReference.cache

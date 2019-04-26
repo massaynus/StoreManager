@@ -78,7 +78,7 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.SeaGreen;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(721, 366);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(653, 366);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(44, 44);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -117,6 +117,7 @@
             this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
             this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
             this.bunifuThinButton21.ButtonText = "Ajouter";
             this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,6 +137,7 @@
             // 
             // StockDataGrid
             // 
+            this.StockDataGrid.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.StockDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.StockDataGrid.AutoGenerateColumns = false;
@@ -178,6 +180,8 @@
             this.StockDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.StockDataGrid.Size = new System.Drawing.Size(768, 365);
             this.StockDataGrid.TabIndex = 0;
+            this.StockDataGrid.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.StockDataGrid_RowValidated);
+            this.StockDataGrid.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.StockDataGrid_UserDeletedRow);
             // 
             // refDataGridViewTextBoxColumn
             // 

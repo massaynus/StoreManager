@@ -26,7 +26,7 @@ namespace Store_Manager
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erreur!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
             
 
@@ -34,7 +34,7 @@ namespace Store_Manager
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            Form f = new Form();
+            ProductAddForm f = new ProductAddForm();
             f.ShowDialog();
             this.productsTableAdapter.Fill(this.productsDataSet1.Products);
             this.Refresh();
@@ -63,6 +63,31 @@ namespace Store_Manager
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             productsTableAdapter.Fill(productsDataSet1.Products);
+        }
+
+        private void StockDataGrid_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+             this.productsTableAdapter.Update(this.productsDataSet1.Products);
+        }
+
+        private void StockDataGrid_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            this.productsTableAdapter.Update(this.productsDataSet1.Products);
+        }
+
+        private void StockDataGrid_CellLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            this.productsTableAdapter.Update(this.productsDataSet1.Products);
+        }
+
+        private void StockDataGrid_Validated(object sender, EventArgs e)
+        {
+            this.productsTableAdapter.Update(this.productsDataSet1.Products);
+        }
+
+        private void StockDataGrid_RowValidated(object sender, DataGridViewCellEventArgs e)
+        {
+            this.productsTableAdapter.Update(this.productsDataSet1.Products);
         }
     }
 }
