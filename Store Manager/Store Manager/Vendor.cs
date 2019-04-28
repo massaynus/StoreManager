@@ -24,10 +24,7 @@ namespace Store_Manager
                 vendeurTableAdapter1.Fill(productsDataSet1.Vendeur);
                 VendorDataGrid.Refresh();
             }
-            catch (Exception ex)
-            {
-                
-            }
+            catch (Exception ex){ }
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
@@ -63,41 +60,16 @@ namespace Store_Manager
             vendeurTableAdapter1.Fill(productsDataSet1.Vendeur);
         }
 
-        //private void VendorDataGrid_CellLeave(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    //this.productsDataSet1.Vendeur.AcceptChanges();
-        //    this.vendeurTableAdapter.Update(productsDataSet1.Vendeur);
-        //}
-
-        //private void VendorDataGrid_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    this.vendeurBindingSource.EndEdit();
-        //    // this.productsDataSet1.Vendeur.AcceptChanges();
-        //}
-
         private void VendorDataGrid_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
         {
             this.vendeurTableAdapter1.Update(this.productsDataSet1.Vendeur);
+            Statistics.Logger("Deleted vendor");
         }
-
-        private void VendorDataGrid_Leave(object sender, EventArgs e)
-        {
-            vendeurTableAdapter1.Update(productsDataSet1.Vendeur);
-        }
-
-        private void VendorDataGrid_EditModeChanged(object sender, EventArgs e)
-        {
-            this.vendeurTableAdapter1.Update(this.productsDataSet1.Vendeur);
-        }
-
-        private void VendorDataGrid_Validated(object sender, EventArgs e)
-        {
-            vendeurTableAdapter1.Update(productsDataSet1.Vendeur);
-        }
-
+        
         private void VendorDataGrid_RowValidated(object sender, DataGridViewCellEventArgs e)
         {
             vendeurTableAdapter1.Update(productsDataSet1.Vendeur);
+            Statistics.Logger("Updated Vendor info");
         }
     }
 }

@@ -5,19 +5,35 @@ using System.Data;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
-using System.Collections.ObjectModel;
+using System.Xml;
+using System.Windows.Forms;
 
 namespace Store_Manager
 {
     public class Statistics
     {
+        //Variables
         public static double PriceSum;
         static int TotalItemsSold;
         static int[] ItemsPerMonth = new int[12];
 
+        //DB access
         static OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Store.accdb");
         static List<string> Products = new List<string>();
         static List<double> Prices = new List<double>();
+
+        //File Logger
+        public static void Logger(string Str)
+        {
+            Str = "[" + DateTime.Now + "]:   " + Str;
+            XmlDocument XmlLog = new XmlDocument();
+            XmlLog.Load("C:\\Users\\Yassine\\Documents\\Mes Projets C#\\Fun Projects\\Store Manager\\Store Manager\\Log.xml");
+            XmlNode Action = XmlLog.CreateElement("Action");
+            Action.InnerText = Str;
+            XmlLog.DocumentElement.AppendChild(Action);
+            XmlLog.Save("C:\\Users\\Yassine\\Documents\\Mes Projets C#\\Fun Projects\\Store Manager\\Store Manager\\Log.xml");
+        }
+        
 
         public static void GetData()
         {
@@ -73,7 +89,7 @@ namespace Store_Manager
 
         public void VendorStats( ) { }
         public void MonthlyStatsHandler( ) { }
-        public void Logger( string Str ) {        }
+       
         
     }
 }

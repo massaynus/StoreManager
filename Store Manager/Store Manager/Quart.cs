@@ -22,6 +22,8 @@ namespace Store_Manager
                 Statistics.OnBuy(lvItem.Text);
             }
             label1.Text = Statistics.PriceSum.ToString() + "    DH";
+
+            Statistics.Logger("Added an item to quart");
         }
 
         public void RemoveFromQuart()
@@ -33,6 +35,8 @@ namespace Store_Manager
                 Statistics.CancelBuy(item.Text);
             }
             label1.Text = Statistics.PriceSum.ToString() + "    DH";
+
+            Statistics.Logger("Removed an item from quart");
         }
 
         public Quart()
@@ -63,16 +67,23 @@ namespace Store_Manager
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            string Lg = "Bought: ";
             string Facture = "";
             foreach (ListViewItem item in listQuart.Items)
             {
+                if (Lg == "Bought: ")
+                    Lg += item.Text;
+                else
+                    Lg += " + " + item.Text;
                 Facture += @" 
 " + item.Text;
             }
             Facture += @"
 
 " + Statistics.PriceSum.ToString() + " DH";
+            Lg += "  Total: " + Statistics.PriceSum.ToString();
 
+            Statistics.Logger("The purshase:\t(" + Lg + ") was made");
             MessageBox.Show(Facture, "Facture", MessageBoxButtons.OK, MessageBoxIcon.Information);
             listQuart.Clear();
             Statistics.PriceSum = 0;

@@ -24,10 +24,7 @@ namespace Store_Manager
                 productsTableAdapter.FillBy(productsDataSet1.Products);
                 StockDataGrid.Refresh();
             }
-            catch (Exception ex)
-            {
-                
-            }
+            catch (Exception ex) { }
             
 
         }
@@ -64,30 +61,17 @@ namespace Store_Manager
         {
             productsTableAdapter.Fill(productsDataSet1.Products);
         }
-
-        private void StockDataGrid_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-             this.productsTableAdapter.Update(this.productsDataSet1.Products);
-        }
-
+        
         private void StockDataGrid_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
         {
             this.productsTableAdapter.Update(this.productsDataSet1.Products);
+            Statistics.Logger("Deleted Product");
         }
-
-        private void StockDataGrid_CellLeave(object sender, DataGridViewCellEventArgs e)
-        {
-            this.productsTableAdapter.Update(this.productsDataSet1.Products);
-        }
-
-        private void StockDataGrid_Validated(object sender, EventArgs e)
-        {
-            this.productsTableAdapter.Update(this.productsDataSet1.Products);
-        }
-
+        
         private void StockDataGrid_RowValidated(object sender, DataGridViewCellEventArgs e)
         {
             this.productsTableAdapter.Update(this.productsDataSet1.Products);
+            Statistics.Logger("Updated Product");
         }
     }
 }

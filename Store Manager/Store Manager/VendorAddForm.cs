@@ -31,6 +31,7 @@ namespace Store_Manager
         private void bunifuTileButton1_Click(object sender, EventArgs e)
         {
             this.vendeurTableAdapter.Insert(N.Text, P.Text, CIN.Text, Tele.Text, Adrs.Text);
+            Statistics.Logger("Added vendor " + N.Text);
             this.Close();
         }
     }

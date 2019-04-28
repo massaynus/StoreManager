@@ -24,7 +24,9 @@ namespace Store_Manager
             panel3.Visible = true;
             stock2.Hide();
             vendor1.Hide();
+            logs1.Hide();
             quart1.Show();
+            Statistics.Logger("Access Quart");
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
@@ -34,7 +36,9 @@ namespace Store_Manager
             panel3.Visible = true;
             vendor1.Hide();
             quart1.Hide();
+            logs1.Hide();
             stock2.Show();
+            Statistics.Logger("Access Stock");
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
@@ -42,6 +46,7 @@ namespace Store_Manager
             System.Drawing.Point P = new Point(0, bunifuFlatButton3.Location.Y);
             panel3.Location = P;
             panel3.Visible = true;
+            Statistics.Logger("Access Statistics");
         }
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
@@ -50,8 +55,10 @@ namespace Store_Manager
             panel3.Location = P;
             panel3.Visible = true;
             quart1.Hide();
+            logs1.Hide();
             vendor1.Show();
             stock2.Hide();
+            Statistics.Logger("Access vendors List");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -60,7 +67,8 @@ namespace Store_Manager
             vendor1.Hide();
             quart1.Hide();
             stock2.Hide();
-
+            logs1.Hide();
+            Statistics.Logger("Application loaded");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -79,6 +87,7 @@ namespace Store_Manager
 
         private void bunifuThinButton21_Click_1(object sender, EventArgs e)
         {
+            Statistics.Logger("Exit application");
             Environment.Exit(0);
         }
 
@@ -90,16 +99,8 @@ namespace Store_Manager
             stock2.Hide();
             vendor1.Hide();
             quart1.Hide();
-        }
-
-        private void bunifuFlatButton5_Click(object sender, EventArgs e)
-        {
-            System.Drawing.Point P = new Point(0, bunifuFlatButton5.Location.Y);
-            panel3.Location = P;
-            panel3.Visible = true;
-            stock2.Hide();
-            vendor1.Hide();
-            quart1.Hide();
+            logs1.Show();
+            Statistics.Logger("Access Log");
         }
     }
 }

@@ -21,6 +21,7 @@ namespace Store_Manager
         {
             this.productsTableAdapter1.Insert(N.Text, Cat.Text, double.Parse(Price.Text), int.Parse(Quan.Text), Desc.Text);
             this.productsDataSet1.AcceptChanges();
+            Statistics.Logger("Added product " + N.Text);
 
             MessageBox.Show("Ajouté avec succées!", "Congratulastions", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
